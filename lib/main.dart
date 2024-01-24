@@ -1,34 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:stroll_interview/configs/assets.dart';
+import 'package:stroll_interview/screens/home.dart';
+import 'package:stroll_interview/utils/responsive_utils.dart';
 
 void main() {
-  runApp(const Home());
+  runApp(const MyApp());
 }
 
-class Home extends StatefulWidget {
-  const Home({super.key});
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
 
   @override
-  State<Home> createState() => _HomeState();
+  State<MyApp> createState() => _MyAppState();
 }
 
-class _HomeState extends State<Home> {
+class _MyAppState extends State<MyApp> {
   @override
-  Widget build(BuildContext context) {
-    return _body();
+  void didChangeDependencies() {
+    ResponsiveUtils.initialize(context);
+    super.didChangeDependencies();
   }
 
-  Widget _body() {
-    return Stack(
-      alignment: Alignment.topCenter,
-      children: [
-        Image.asset(
-          Assets.images.background,
-          fit: BoxFit.cover,
-          height: double.infinity,
-          width: double.infinity,
-        )
-      ],
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Home(),
     );
   }
 }
