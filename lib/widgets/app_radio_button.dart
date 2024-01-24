@@ -27,8 +27,9 @@ class _AppRadioButtonState extends State<AppRadioButton> {
       width: 344.responsive,
       height: 126.responsive,
       child: Wrap(
-        spacing: 12,
-        runSpacing: 12,
+        spacing: MediaQuery.of(context).size.height < 900 ? 12.responsive : 12,
+        runSpacing:
+            MediaQuery.of(context).size.height < 900 ? 12.responsive : 12,
         children: widget.options.entries.map((e) {
           bool isSelected = e.key == selectedOption;
           return InkWell(

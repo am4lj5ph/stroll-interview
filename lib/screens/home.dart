@@ -362,7 +362,7 @@ _bottomnNavigationBar() {
     child: Container(
       color: const Color(0xFF0F1115),
       height: 79.responsive,
-      width: 375.responsive,
+      width: double.infinity,
       child: Column(
         children: [
           SizedBox(
