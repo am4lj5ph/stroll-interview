@@ -1,16 +1,12 @@
 # stroll_interview
 
-A new Flutter project.
+Stroll Interview Project
 
-## Getting Started
+## Note
+Version:
+Flutter 3.16.5
+Dart 3.2.3
 
-This project is a starting point for a Flutter application.
+Screenshots:
+iPhoneX, iPhone 15ProMax, iPhone SE and iPhone 15Plus screenshots are attched in the screenshot directory.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
