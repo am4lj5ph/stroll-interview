@@ -188,7 +188,10 @@ class _RecorderState extends State<Recorder> {
                       },
                       button: recorderButtons(),
                     ),
-                    SubmitButton(),
+                    SubmitButton(
+                      canSubmit: isRecordingFinished,
+                      onPressed: () {},
+                    ),
                   ],
                 ),
               ),

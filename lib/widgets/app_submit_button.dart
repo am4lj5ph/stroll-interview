@@ -11,7 +11,10 @@ import 'package:flutter_inset_box_shadow/flutter_inset_box_shadow.dart';
 import 'package:flutter/material.dart' hide BoxDecoration, BoxShadow;
 
 class SubmitButton extends StatefulWidget {
-  const SubmitButton({super.key});
+  final VoidCallback onPressed;
+  final bool canSubmit;
+  const SubmitButton(
+      {super.key, required this.onPressed, required this.canSubmit});
 
   @override
   State<SubmitButton> createState() => _SubmitButtonState();
@@ -22,13 +25,17 @@ class _SubmitButtonState extends State<SubmitButton> {
   Widget build(BuildContext context) {
     return Expanded(
       child: TextButton(
-        onPressed: () {},
+        onPressed: () {
+          widget.onPressed();
+        },
         child: SizedBox(
           width: 40.responsive,
           height: 16.responsive,
           child: AppText(
             "Submit",
-            color: Color(0xFF5D6369),
+            color: widget.canSubmit
+                ? const Color(0xFFF5F5F5)
+                : const Color(0xFF5D6369),
             appFont: AppFont.appFONT,
             fontSize: 13.responsive,
             align: TextAlign.center,
